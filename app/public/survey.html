@@ -7,9 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
-    <!-- Chosen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+   
     <title>Survey</title>
 </head>
 <body>
@@ -29,52 +29,22 @@
             <strong>Question 1</strong>
         </h3>
         <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="5" id="myRange">
+            <p>Value: <span id="demo"></span></p>
+        </div>
+
+
+
+
+
+
         
-        <select class="chosen-select" value="1" style="display: none;">
-                <option value></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <div class="chosen-container chosen-container-single" style="width: 155px" title id="q1_chosen">
-                    <a class="chosen-single chosen-default">
-                        <span>Select an option</span>
-                        <div>
-                            <b></b>
-                        </div>
-                    </a>
-                    <div class="chosen-drop">
-                        <div class="chosen-search">
-                            <input type="text" autocomplete="off">
-                        </div>
-                        <ul class="chosen-results"></ul>
-                    </div>
-                </div>
-                
-                <br>
-                
-                <div class="dropdown" id="q1">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select an option
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" value="1">1 (Strongly Disagree)</a>
-                        <a class="dropdown-item" value="2">2</a>
-                        <a class="dropdown-item" value="3">3</a>
-                        <a class="dropdown-item" value="4">4</a>
-                        <a class="dropdown-item" value="5">5 (Strongly Agree)</a>
-                    </div>
-                </div>
-                
-            </div>
             <!-- Optional JavaScript -->
+            <script src="../../assets/js/logic.js"></script>
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            <!-- Chosen -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
         </body>
         </html>
