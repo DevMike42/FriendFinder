@@ -1,4 +1,4 @@
-.slidecontainer {
+/* .slidecontainer {
     width: 100%;
   }
   
@@ -31,5 +31,8 @@
     height: 25px;
     background: #4CAF50;
     cursor: pointer;
-  }
+  } */
   
+  .input-group {
+    max-width: 300px
+  }
