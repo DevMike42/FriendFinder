@@ -1,3 +1,5 @@
+// Get synced and working
+
 var express = require("express");
 var html = require("./routing/htmlRoutes");
 var api = require("./routing/apiRoutes");
