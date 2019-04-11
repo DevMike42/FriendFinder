@@ -1,30 +1,55 @@
-// TODO: Code logic for handling compatibility calculations
+
 
 // Requiring the friends data file
-var friendsData = require('../data/friends.js');
+var friendsList = require('../data/friends.js');
 
-// Routes
-function apiAllFriends(app) {
+module.exports = function(app) {
 
-    // GET route for displaying all possible friends
-    app.get('/api/friends', function(req, res) {
-        
-        // sends responst as JSON
-        res.json(friendsData);
+    app.get("/api/friends", function(req, res) {
+        res.json(friendsList);
     });
-};
 
-function apiAddFriend(app) {
+    app.post("/api/friends", function(req, res) {
 
-    // POST Rout for handling incoming survey results
-    // as well as compatibility logic
-    app.post('/api/friends', function(req, res) {
+        var bestMatch = {
+            name: "",
+            photo: "",
+            scoreDifference: Infinity
+        };
 
-        // TODO: Add logic for incoming survey results
+        console.log(req.body);
+        userData = req.body;
+        userScores = userData.scores;
 
-        // TODO: Add lofic for friend compatiblity
+        var totalDiff;
+
+        for (var i = 0; i < friendsList.length; i++) {
+
+            var currentFriend = friendsList[i];
+
+            totalDiff = 0;
+
+            console.log(currentFriend.name);
+            
+            for (var j = 0; j < currentFriend.scores.length; j++) {
+                var currentFriendScore = currentFriend.scores[j];
+                var currentUserScore = userScores[j];
+                
+                totalDiff += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
+                
+                console.log("Name: " + currentFriend.name + " TotalDiff: " + totalDiff);
+            }
+
+            if (totalDiff <= bestMatch.scoreDifference) {
+                bestMatch.name = currentFriend.name;
+                bestMatch.photo = currentFriend.photo;
+                bestMatch.scoreDifference = currentFriend.scoreDifference;
+            }
+        }
+
+        friendsList.push(userData);
+
+        res.json(bestMatch);
+
     });
-};
-
-// Exporting apiRoutes
-modeule.exports = apiRoutes;
+}
