@@ -14,5 +14,9 @@ module.exports = function(app) {
     app.get("/*", function(req, res) {
         res.sendFile(path.join(__dirname, "/../public/home.html"));
     });
+    // Displays home page to root url
+    app.get("/", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/survey.html"));
+    });
 
 };
