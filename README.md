@@ -1,10 +1,16 @@
 # FriendFinder
 Homework Week 13: Friend Finder (Node and Express Servers)
 
+Dependencies: Express / Path
 
-TODO:
-1. Create modal in survey.html file for displaying match results
+1. Open directory and run `npm install`
 
-2. Code logic for handling compatibilty calculations in apiRoutes.js
+2. run `server.js`
 
-3. Get server js matched up and working
+3. Open localhost:8080 in browswer
+
+4. Click "Go to Surver"
+
+5. Complete survey form and submit
+
+The application will search add your data to the database and search for your closes matching friend based on a comparison of your answers to the survey questions.
