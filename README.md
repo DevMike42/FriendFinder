@@ -3,13 +3,9 @@ Homework Week 13: Friend Finder (Node and Express Servers)
 
 Dependencies: Express / Path
 
-1. Open directory and run `npm install`
+1. Visit https://radiant-lake-98412.herokuapp.com/survey
 
-2. run `server.js`
-
-3. Open localhost:8080 in browswer
-
-4. Click "Go to Surver"
+2. Click "Go to Survey"
 
 5. Complete survey form and submit
 
